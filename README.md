@@ -1,7 +1,8 @@
 # Design Patterns for Fontend
-Please find a few demo projects with several design patterns for frontend. Please note all projects are based on Nodejs, so you'll need to install node & npm to you machine, also don't forget to install the dependencies for each project from the package.json by calling **npm install** command in the project folder.
+Please find a few demo projects with several design patterns for frontend. Please note all projects are based on Nodejs, so you'll need to have node & npm on your machine, also don't forget to install the dependencies for each project from the package.json by calling **npm install** command in the project folder.
 
-The list of the design patterns (to be updated per demo prepatation and readiness):
+Below you can see the list (to be updated per demo prepatation and readiness) of demos for the design patterns grouped as follows:
+
 #  Creational patterns
 
 > Creational patterns abstracts object instantiation process, given this the system becomes independent of the details how objects are created, composed, and represented.
@@ -16,3 +17,5 @@ The list of the design patterns (to be updated per demo prepatation and readines
 
 # Behavioral patterns
 >Coming soon
+
+Good luck.
