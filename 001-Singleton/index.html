@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcel Sandbox</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="global-state">
+            <h3>Global State</h3>
+            <h4>Color</h4>
+            <span id="selected-color"></span>
+        </div>
+        <div class="contents">
+            <div class="component-a">
+                <strong>Component A</strong>
+                <div>Pick color</div>
+                <span id="selected-color">black</span>
+                <input type="color" id="color-picker-a" />
+            </div>
+            <div class="component-b">
+                <strong>Component B</strong>
+                <div>Pick color</div>
+                <span id="selected-color">black</span>
+                <input type="color" id="color-picker-b" />
+            </div>
+        </div>
+        <script src="src/index.js"></script>
+        <script src="src/componentA.js"></script>
+        <script src="src/componentB.js"></script>
+    </body>
+</html>
