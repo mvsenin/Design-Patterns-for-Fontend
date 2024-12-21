@@ -1,5 +1,5 @@
 # Design Patterns for Fontend
-Please find a few demo projects for several design patterns for frontend
+Please find a few demo projects with several design patterns for frontend. Please note all projects are based on Nodejs, so you'll need to install node & npm to you machine, also don't forget to install the dependencies for each project from the package.json by calling **npm install** command in the project folder.
 
 The list of the design patterns (to be updated per demo prepatation and readiness):
 #  Creational patterns
