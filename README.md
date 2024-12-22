@@ -13,6 +13,9 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 # Structural patterns
 
+> Structural patterns are a group of patterns that describe the relationships between entities and how those relationships should be formed. They help us to determine how our objects should interact with each other, which makes it easier for us to design clean and flexible systems. <br />
+> The structural design patterns are classic solutions to recurring problems in object-oriented systems. They help programmers to organize their code in a way that’s flexible and easy to maintain, even as the system evolves over time. Structural design patterns can be applied at different levels of abstraction, from low-level details of how classes are used to high-level organization of entire systems.
+
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
 | 1. Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
