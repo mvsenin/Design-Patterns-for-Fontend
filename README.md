@@ -9,12 +9,13 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
-| 1. Singleton | The sole instance of a class | Global logger, global state data |
-| 2. Facade | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
+| 1. Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes, Configuration File |
 
 # Structural patterns
 
->Coming soon
+| Pattern name | Variable aspects | Scenarios |
+|--------------|------------------|-----------|
+| 1. Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
 
 # Behavioral patterns
 >Coming soon
