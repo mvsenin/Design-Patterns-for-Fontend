@@ -1,8 +1,8 @@
 This is demo project for **Signleton design pattern**
 
-This is on of the **Structural design patterns** that restricts the class to create only one instance.
+This is one of the **Structural design patterns** that restricts the class to create only one instance when you need it.
 
-It can be considered the basics of global state management libraries such Redux or React Context.
+It can be considered as the basics of global state management libraries such Redux or React Context.
 
 They can be accessed globally and acts as a single access point for accessing the global state.
 
