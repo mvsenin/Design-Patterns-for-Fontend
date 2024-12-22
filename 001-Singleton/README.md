@@ -1,6 +1,6 @@
 This is demo project for **Signleton design pattern**
 
-The Singleton pattern restricts the class to create only one instance.
+This is on of the **Structural design patterns** that restricts the class to create only one instance.
 
 It can be considered the basics of global state management libraries such Redux or React Context.
 
