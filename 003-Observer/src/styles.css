@@ -1,0 +1,12 @@
+.italic {
+    font-style: italic;
+}
+.flex {
+    display: flex;
+}
+.observer {
+    border: solid 1px #cccccc;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}

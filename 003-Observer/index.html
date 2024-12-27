@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Observer design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="global-state">
+            <label for="sensorValue">Sensor value: </label>
+            <input id="sensorValue" name="sensorValue" value="0"/>
+            <p>
+            <button id="set-sensor-value">Set sensor value</button>
+            | <button id="reset-sensor-value">Reset sensor</button>
+            | <button id="add-monitor">Add observer</button>
+            | <button id="notify-odd">Notify odd observers</button>
+            | <button id="notify-even">Notify even observers</button>
+            </p>
+            Monitors' data:
+            <span id="monitors-data" class="italic flex">No monitor exists</span>
+        </div>
+        <script src="src/index.ts"></script>
+    </body>
+</html>
