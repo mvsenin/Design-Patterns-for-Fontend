@@ -9,7 +9,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
-| 1. Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes, Configuration File |
+| 1. Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes <br /> Configuration File |
 
 # Structural patterns
 
@@ -21,6 +21,12 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 | 1. Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
 
 # Behavioral patterns
->Coming soon
+> Behavioral Patterns are concerned with algorithms and the assignment of responsibilities between objects.
+> They describe not just patterns of objects or classes but also the patterns of communication between them.
+> These patterns characterize complex control flow that’s difficult to follow at run-time. 
+
+| Pattern name | Variable aspects | Scenarios |
+|--------------|------------------|-----------|
+| 1. Observer  | Number of objects that depend on another object; how the dependent objects stay up to date | Immediately updating all of the dependents (observers) of the subject and notified on its changes |
 
 Good luck.
