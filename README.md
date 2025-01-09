@@ -9,7 +9,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
-| 1. Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes <br /> Configuration File |
+| 1.&nbsp;Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes <br /> Configuration File |
 
 # Structural patterns
 
@@ -18,7 +18,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
-| 1. Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
+| 1.&nbsp;Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
 
 # Behavioral patterns
 > Behavioral Patterns are concerned with algorithms and the assignment of responsibilities between objects.
@@ -27,7 +27,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
-| 1. Observer  | Number of objects that depend on another object; how the dependent objects stay up to date | Immediately updating all of the dependents (observers) of the subject and notified on its changes |
-| 2. Publisher/Subscriber  | Number of objects that subscribes/listen to other object(s); how the listening objects stay up to date | System handling the sending and receiving of messages, e.g. chat apps |
+| 1.&nbsp;Observer  | Number of objects that depend on another object; how the dependent objects stay up to date | Immediately updating all of the dependents (observers) of the subject and notified on its changes |
+| 2.&nbsp;Publisher/Subscriber  | Number of objects that subscribes/listen to other object(s); how the listening objects stay up to date | System handling the sending and receiving of messages, e.g. chat apps |
 
 Good luck.
