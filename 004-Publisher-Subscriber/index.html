@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Publisher/Subscriber design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="publisherContainer" id="publisherContainer"></div>
+        <div class="global-state flex">
+            <div>
+                <label for="userLogin">login: </label>
+                <input id="userLogin" name="userLogin" value=""/>
+            </div>
+            <div>
+                <label for="userPassword">password: </label>
+                <input id="userPassword" name="userPassword" value="" type="password"/>
+            </div>
+            <div>
+                <button id="submit" disabled="true">submit</button>
+            </div>
+        </div>
+        <script src="src/index.ts"></script>
+    </body>
+</html>

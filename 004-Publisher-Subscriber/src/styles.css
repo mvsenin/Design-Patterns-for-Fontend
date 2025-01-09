@@ -1,0 +1,47 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #999999;
+}
+
+input:focus {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #eeeeff;
+    outline: none;
+}
+
+input:hover {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    outline: none;
+}
+
+button {
+    border-radius: 10px;
+    border: 1px solid #999999;
+    margin-top: 10px;
+}
+
+.publisherContainer div {
+    background-color: rgba(236, 161, 161, 0.5);
+    border: 1px solid rgba(230, 127, 127, 0.5);
+    margin: 5px;
+    padding: 5px;
+}
+
+.publisherContainer div.OK {
+    background-color: rgba(161, 236, 171, 0.5);
+    border: 1px solid rgba(107, 211, 121, 0.5);
+}
