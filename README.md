@@ -19,6 +19,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
 | 1.&nbsp;Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
+| 2.&nbsp;Adapter    | Classes/objects having different/legacy interfaces | Integrating Legacy Code  <br />  Working with Third-Party APIs <br /> Database Connectivity <br /> File Format Conversion <br /> Data Transformation <br /> Version Upgrades |
 
 # Behavioral patterns
 > Behavioral Patterns are concerned with algorithms and the assignment of responsibilities between objects.
