@@ -28,5 +28,6 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 | Pattern name | Variable aspects | Scenarios |
 |--------------|------------------|-----------|
 | 1. Observer  | Number of objects that depend on another object; how the dependent objects stay up to date | Immediately updating all of the dependents (observers) of the subject and notified on its changes |
+| 2. Publisher/Subscriber  | Number of objects that subscribes/listen to other object(s); how the listening objects stay up to date | System handling the sending and receiving of messages, e.g. chat apps |
 
 Good luck.
