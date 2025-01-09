@@ -1,6 +1,6 @@
-This is demo project for Adapter design pattern
+This is demo project for **Adapter design pattern**.
 
-This is one of the Structural design patterns that allows you to make one interface or object work with another that has a different interface. It acts as a bridge, enabling the compatibility of two systems that would not naturally work together.
+This is one of the **Structural design patterns** that allows you to make one interface or object work with another that has a different interface. It acts as a bridge, enabling the compatibility of two systems that would not naturally work together.
 
 Pros:
 * **Compatibility:** The Adapter Method allows you to make two incompatible interfaces work together, promoting interoperability between different parts of your application or external libraries.
