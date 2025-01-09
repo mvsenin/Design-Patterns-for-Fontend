@@ -1,0 +1,60 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+label {
+    margin-top: 10px;
+}
+select {
+    border-radius: 10px;
+    border: 1px solid #999999;
+}
+
+select:focus {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #eeeeff;
+    outline: none;
+}
+
+select:hover {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    outline: none;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #999999;
+}
+
+input:focus {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #eeeeff;
+    outline: none;
+}
+
+input:hover {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    outline: none;
+}
+
+button {
+    border-radius: 10px;
+    border: 1px solid #999999;
+    margin-top: 10px;
+}
+
+span {
+    margin-top: 10px;
+}

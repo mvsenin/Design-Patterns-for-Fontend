@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adapter design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="global-state flex">
+            <div>
+                <label for="payAmount">Enter amount to be sent: </label>
+                <input id="payAmount" name="payAmount" value="" title="Amount as number with or without decimals after '.'"/>
+            </div>
+            <div>
+                <label for="payMethod">Select payment method: </label>
+                <select id="payMethod" name="payMethod" value="">
+                    <option value="payBySPB">СПБ</option>
+                    <option value="payByCard">Картой банка</option>
+                    <option value="payBySMS">SMS</option>
+                    <option value="payByOldSPB">Старый СПБ</option>
+                </select>
+            </div>
+            <div>
+                <button id="submit" disabled="true" type="submit">submit</button>
+            </div>
+            <div>
+                <span id="payment-data"></span>
+            </div>
+        </div>
+        <script src="src/index.ts"></script>
+    </body>
+</html>
