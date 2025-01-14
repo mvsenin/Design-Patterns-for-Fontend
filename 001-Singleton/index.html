@@ -1,33 +1,143 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Signleton design pattern demo</title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./src/styles.css" />
-    </head>
+  <head>
+    <title>Signleton design pattern demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
 
-    <body>
-        <div class="global-state">
-            <h3>Global State</h3>
-            <h4>Color</h4>
-            <span id="selected-color"></span>
-        </div>
-        <div class="contents">
-            <div class="component-a">
-                <strong>Component A</strong>
-                <div>Pick color</div>
-                <span id="selected-color">black</span>
-                <input type="color" id="color-picker-a" />
-            </div>
-            <div class="component-b">
-                <strong>Component B</strong>
-                <div>Pick color</div>
-                <span id="selected-color">black</span>
-                <input type="color" id="color-picker-b" />
-            </div>
-        </div>
-        <script src="src/index.js"></script>
-        <script src="src/componentA.js"></script>
-        <script src="src/componentB.js"></script>
-    </body>
+  <body>
+    <div class="global-state">
+      <h3>Global State</h3>
+      <h4>Color</h4>
+      <span id="selected-color"></span>
+    </div>
+    <div class="contents">
+      <div class="component-a">
+        <strong>Component A</strong>
+        <div>Pick color</div>
+        <span id="selected-color">black</span>
+        <input type="color" id="color-picker-a" />
+      </div>
+      <div class="component-b">
+        <strong>Component B</strong>
+        <div>Pick color</div>
+        <span id="selected-color">black</span>
+        <input type="color" id="color-picker-b" />
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+    <script src="src/componentA.js"></script>
+    <script src="src/componentB.js"></script>
+    <details class="container-lg">
+      <summary>
+        <b
+          ><img src="/src/hand-index-thumb.svg" height="30vh" />Singleton
+          design pattern summary</b
+        >
+      </summary>
+      <article class="markdown-body entry-content" itemprop="text">
+        <p dir="auto">
+          This is demo project for <strong>Signleton design pattern</strong>.
+        </p>
+        <p dir="auto">
+          This is one of the <strong>Structural design patterns</strong> that
+          restricts the class to create only one instance when you need it.
+        </p>
+        <p dir="auto">
+          It can be considered as the basics of global state management
+          libraries such as Redux or React Context.
+        </p>
+        <p dir="auto">
+          It can be accessed globally and acts as a single access point for
+          accessing the global state.
+        </p>
+        <p dir="auto">Pros:</p>
+        <ul dir="auto">
+          <li>
+            <strong>Controlled access to sole instance:</strong> Because the
+            Singleton class encapsulates its sole instance, it can have strict
+            control over how and when clients access it.
+          </li>
+          <li>
+            <strong>Reduced name space:</strong> The Singleton pattern is an
+            improvement over global variables. It avoids polluting the name
+            space with global variables that store sole instances.
+          </li>
+          <li>
+            <strong
+              >Permits refinement of operations and representation:</strong
+            >
+            The Singleton class may be subclassed, and it’s easy to configure an
+            application with an instance of this extended class. You can
+            configure the application with an instance of the class you need at
+            run-time.
+          </li>
+          <li>
+            <strong>Permits a variable number of instances:</strong> The pattern
+            makes it easy to change your mind and allow more than one instance
+            of the Singleton class. Moreover, you can use the same approach to
+            control the number of instances that the application uses. Only the
+            operation that grants access to the Singleton instance needs to
+            change.
+          </li>
+          <li>
+            <strong>More flexible than class operations:</strong> Another way to
+            package a singleton’s functionality is to use class operations (that
+            is,static member functions in C++ or class methods in Smalltalk).But
+            both of these language techniques make it hard to change a design to
+            allow more than one instance of a class.Moreover, static member
+            functions inC++are never virtual, so subclasses can’t override them
+            polymorphically.
+          </li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+          <li>
+            <strong>Single responsibility principle violation:</strong> That is,
+            it tries to solve two problems at the same time. It tries to solve
+            the following problems: Ensure that a class will have only one
+            instance, and assigning a global access point to the singleton class
+            instance.
+          </li>
+          <li>
+            <strong>Concurrency Issues:</strong> If not implemented carefully,
+            Singletons can introduce concurrency issues in multi-threaded
+            applications. You may need to use synchronization mechanisms, like
+            locks or mutexes, to ensure safe access to the Singleton instance,
+            which can add complexity to your code.
+          </li>
+          <li>
+            <strong>Singleton Pattern Overuse:</strong> Due to its convenience,
+            developers might overuse the Singleton pattern, leading to an
+            abundance of Singleton instances in an application. This can defeat
+            the purpose of the pattern and result in increased memory usage.
+          </li>
+          <li>
+            <strong>Initialization Overhead:</strong> Lazy initialization, while
+            often an advantage, can introduce some overhead when the Singleton
+            instance is first accessed. If the initialization process is
+            resource-intensive, it can affect the application’s startup time.
+          </li>
+          <li>
+            <strong>Difficulties in Debugging:</strong> Debugging a
+            Singleton-based codebase can be challenging, especially when issues
+            related to the Singleton’s state arise. It can be hard to trace the
+            source of problems when multiple parts of the code may have modified
+            the Singleton’s data. It is difficult to write unit test cases for
+            singleton classes. This is because the order of execution can change
+            the value present in the global state, so the order of execution is
+            important.
+          </li>
+          <li>
+            <strong>Limited Dependency Injection:</strong> Using dependency
+            injection and inversion of control becomes less straightforward when
+            relying on Singleton instances. It may be challenging to inject
+            alternative implementations or configurations because the Singleton
+            instance is typically accessed globally.
+          </li>
+        </ul>
+      </article>
+    </details>
+  </body>
 </html>
