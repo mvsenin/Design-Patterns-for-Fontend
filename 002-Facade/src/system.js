@@ -1,7 +1,9 @@
 /*
-* The module composes the system from subsystems.
-* New subsystems/components can be added here and won't affect the Facade interface class
-*/
+ * The module composes the system from subsystems A, B, C.
+
+ * Subsystems/components can be added here from different versions of the system
+ * without affecting the Facade interface class
+ */
 
 // DBG Case 1: get full subsystem one
 // import {SubsystemA, SubsystemB, SubsystemC} from "./subsystemOne.js"
