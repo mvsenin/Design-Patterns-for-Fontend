@@ -8,12 +8,34 @@
 
     <body>
         <div class="global-state">
-            <span>Please press the buttons to get the system components info</span>
-            <p>
-            <button id="get-subsystem-info">Get Subsystem Info</button> | <button id="log-subsystem-info">Log Subsystem Info</button>
-            </p>
+            <span>Please press the buttons to get the system components info via common interface(s)</span>
+            <span><button id="get-subsystem-info">Get Subsystem Info</button> - facade.commonInfoInterface()</span>
+            <span><button id="log-subsystem-info">Log Subsystem Info</button> - facade.commonLogInterface()</span>
             <span id="subsystem-info" class="italic">No Subsystem Info</span>
         </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Facade design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Facade design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Structural design patterns</strong> that allows users to create a simple interface that hides the complex implementation details of the system making it easier to use.</p>
+                <p dir="auto">This pattern intends to create a simplified and unified interface for a set of interfaces hiding the implementation details making it less complex to use.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Simplified Interface:</strong> The Facade design pattern uses a simplified interface which helps the client to interact with and perform operations without knowing the implementation details.</li>
+                <li><strong>Abstraction and Encapsulation:</strong> The Facade design pattern abstracts the internal implementation details and Encapsulates the Subsystem's logic.</li>
+                <li><strong>Reduced Complexity:</strong> As the Facade design pattern hides the implementation details for the client, there is reduced complexity and cognitive load on the client. so, the client can focus on the system's working rather than the subsystem's implementation.</li>
+                <li><strong>Improved Maintainability:</strong> As the common interface provided by the Facade class serves as an accessing entry point, it also acts as a centralized way to make changes to the subsystem, providing an easier way to maintain the subsystem.</li>
+                <li><strong>Enhanced Reusability:</strong> The simplified interface provided by the facade makes it easier to reuse the subsystem across multiple parts of the application or in different applications.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Limited Functionality Exposure:</strong> The Facade design pattern may restrict the client from accessing the functionality of certain operation of the subsystem without knowing the actual implementation details.</li>
+                <li><strong>Potential Performance Overhead:</strong> In some cases, Relying on the facade design pattern may lead to Performance overhead due to the additional layer of Abstraction.</li>
+                <li><strong>Potential Design Misuse:</strong> In some cases, taking the advantage of hiding the implementation details developers may hide up the poor implementation or design issues.</li>
+                </ul>
+                </article>
+          </details>
         <script src="src/index.js"></script>
     </body>
 </html>

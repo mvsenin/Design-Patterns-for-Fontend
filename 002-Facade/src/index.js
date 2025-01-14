@@ -11,7 +11,7 @@ const btnLogSubsystemInfo = document.querySelector("#log-subsystem-info");
 
 // Button click event handlers
 btnGetSubsystemInfo.onclick = (event) => {
-    globalStateElem.innerHTML = facade.commonIngoInterface();
+    globalStateElem.innerHTML = facade.commonInfoInterface();
     globalStateElem.classList.remove("italic");
 }
 

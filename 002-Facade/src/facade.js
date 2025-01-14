@@ -18,7 +18,8 @@ export class Facade {
         console.log(this.subsystemB.method());
         console.log(this.subsystemC.method());
     }
-    commonIngoInterface() {
+    
+    commonInfoInterface() {
         return this.subsystemA.method() + '<br>' + this.subsystemB.method() + '<br>' + this.subsystemC.method();
     }
 }
