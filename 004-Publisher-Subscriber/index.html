@@ -21,6 +21,33 @@
                 <button id="submit" disabled="true">submit</button>
             </div>
         </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Publisher/Subscriber design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Publisher/Subscriber design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Behavioral patterns</strong> that promotes loose coupling and scalability. This pattern revolves around dispatching messages from publishers to an unspecified number of subscribers or listeners, thereby promoting a many-to-many dependency between objects.</p>
+                <p dir="auto">There are several behavioral design patterns deal with separating our code into smaller, more manageable chunks.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Decoupling:</strong> Publishers and subscribers operate independently, allowing for easier maintenance and scalability. Changes to one do not necessitate changes to the other12.</li>
+                <li><strong>Scalability:</strong> The architecture can handle a large number of publishers and subscribers without impacting performance. New subscribers can be added seamlessly, which is beneficial for systems that need to scale dynamically17.</li>
+                <li><strong>Simplified Communication:</strong> By eliminating direct point-to-point connections, the Pub/Sub model simplifies integration code, making it easier to manage communications across different components12.</li>
+                <li><strong>Asynchronous Messaging:</strong> Messages can be sent without waiting for subscribers to process them, enhancing system responsiveness and efficiency36.</li>
+                <li><strong>Flexibility:</strong> The system allows for dynamic subscription management, enabling subscribers to join or leave topics at runtime without affecting publishers37.</li>
+                <li><strong>Reliability:</strong> Utilizing a message broker can ensure reliable message delivery, even if some subscribers are offline, as the broker can store messages until they are received7.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Message Ordering Issues:</strong> The Pub/Sub pattern does not guarantee the order in which messages are delivered, which can be problematic for applications that require sequential processing of messages23.</li>
+                <li><strong>Potential for Message Loss:</strong> Since there is no direct connection between publishers and subscribers, failed message deliveries can occur without notification, leading to potential data loss67.</li>
+                <li><strong>Increased Complexity:</strong> The introduction of a message broker and the management of subscriptions can complicate system architecture, particularly for smaller applications where direct communication might suffice34.</li>
+                <li><strong>Administrative Overhead:</strong> Managing multiple connections and subscriptions can lead to increased administrative overhead, especially as the number of subscribers grows15.</li>
+                <li><strong>Security Concerns:</strong> The decoupling may expose the system to vulnerabilities if not properly secured, as malicious publishers could potentially send harmful messages to subscribers56.</li>
+                </ul>
+                <p dir="auto">In summary, while the Publisher/Subscriber pattern offers significant advantages in terms of flexibility and scalability, it also presents challenges related to message ordering, delivery reliability, and system complexity that must be carefully managed.</p>
+                </article>
+        </details>
         <script src="src/index.ts"></script>
     </body>
 </html>

@@ -1,35 +1,167 @@
+@media only screen and (orientation: landscape) {
+  body,
+  summary,
+  .markdown-body,
+  button, input {
+    font-size: 16px;
+  }
+  .contents {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .component-a,
+  .component-b {
+    width: 50%;
+  }
+  .global-state {
+    width: calc(100%-40px);
+    gap: 10px;
+  }
+  .global-state-row {
+    gap: 5px;
+  }
+  .global-state-col {
+    gap: 5px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  body,
+  summary,
+  .markdown-body,
+  button, input {
+    font-size: 2vh;
+  }
+  .contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .component-a,
+  .component-b {
+    width: 100%;
+  }
+  .global-state {
+    width: calc(100%);
+    gap: 2vh;
+  }
+  .global-state-row {
+    gap: 1vh;
+  }
+  .global-state-col {
+    gap: 1vh;
+  }
+
+}
+
+body {
+  font-family: sans-serif;
+}
+#monitors-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.global-state {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cacaca;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20%;
+  text-align: center;
+  padding: 20px;
+}
+.global-state div {
+    margin-left: auto;
+    margin-right: auto;
+}
+.global-state-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.global-state-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+.container-lg {
+  max-width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+button {
+  border-radius: 4px;
+  border-width: 1px;
+  padding: 5px;
+  font-weight: bold;
+}
+summary {
+  background-color: rgb(144, 213, 245);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+img {
+  margin: 10px;
+  vertical-align:middle;  
+}
+article {
+  background-color: rgba(144, 213, 245, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+p {
+  margin-block-start: 0em;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: center;
 }
 
 .flex div {
     display: flex;
     flex-direction: column;
-    width: 200px;
 }
 
 input {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #999999;
 }
 
 input:focus {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #000000;
     background-color: #eeeeff;
     outline: none;
 }
 
 input:hover {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #000000;
     outline: none;
 }
 
 button {
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #999999;
     margin-top: 10px;
 }
