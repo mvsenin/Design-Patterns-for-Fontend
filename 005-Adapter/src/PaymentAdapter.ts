@@ -1,6 +1,7 @@
-import { PaymentBySMS } from "./PaymentBySMS";
 import PaymentProcessor from "./PaymentProcessor ";
-import { PaymentBySPB } from "./PaymentBySPB";
+import { PaymentBySMS } from "./PaymentBySMS";
+import { PaymentBySBP } from "./PaymentBySBP";
+import { PaymentByOldSBP } from "./PaymentByOldSBP";
 
 /*
     PaymentAdapter implements common interface PaymentProcessor
@@ -9,9 +10,9 @@ import { PaymentBySPB } from "./PaymentBySPB";
 
 class PaymentAdapter implements PaymentProcessor {
     // Supported pay processors
-    private payProcessor: PaymentBySMS|PaymentBySPB;
+    private payProcessor: PaymentProcessor|PaymentBySMS|PaymentByOldSBP;
 
-    constructor(payProcessor: PaymentBySMS|PaymentBySPB) {
+    constructor(payProcessor: PaymentProcessor|PaymentBySMS|PaymentByOldSBP) {
         this.payProcessor = payProcessor;
     }
 
@@ -23,9 +24,11 @@ class PaymentAdapter implements PaymentProcessor {
         // Pay by SMS
         if (this.payProcessor.constructor.name === "PaymentBySMS") {
             result += (payBy as PaymentBySMS).SendMoneyBySMS(amount);
-        // Pay by legacy (old) SPB
-        } else if (this.payProcessor.constructor.name === "PaymentBySPB") {
-            result += (payBy as PaymentBySPB).payByOldSPB(amount);
+        // Pay by legacy (old) SBP
+        } else if (this.payProcessor.constructor.name === "PaymentByOldSBP") {
+            result += (payBy as PaymentByOldSBP).payByOldSBP(amount);
+        } else {
+            result += (payBy as PaymentBySBP).pay(amount);
         }
         return result;
     }

@@ -1,8 +1,9 @@
-import PaymentAdapter from "./paymentAdapter";
+import PaymentProcessor from "./PaymentProcessor ";
+import PaymentAdapter from "./PaymentAdapter";
 import payByCard from "./PaymentByCard";
 import payBySMS from "./PaymentBySMS";
-import payBySPB from "./PaymentBySPB";
-import PaymentProcessor from "./PaymentProcessor ";
+import payBySBP from "./PaymentBySBP";
+import payByOldSBP from "./PaymentByOldSBP";
 
 // Getting UI elements
 var infoPanel: HTMLSpanElement;
@@ -28,20 +29,20 @@ btnSubmit.onclick = (event) => {
 
     // Call appropriate payment method
     switch (payMethod.value) {
-        case "payBySPB": {
-            processPayment(payBySPB);
+        case "payBySBP": {
+            processPayment(new PaymentAdapter(payBySBP));
             break;
         }
         case "payByCard": {
-            processPayment(payByCard);
+            processPayment(new PaymentAdapter(payByCard));
             break;
         }
         case "payBySMS": {
             processPayment(new PaymentAdapter(payBySMS));
             break;
         }
-        case "payByOldSPB": {
-            processPayment(new PaymentAdapter(payBySPB));
+        case "payByOldSBP": {
+            processPayment(new PaymentAdapter(payByOldSBP));
             break;
         }
         default: {

@@ -1,5 +1,5 @@
 {
-  "name": "004-publisher_subscriber",
+  "name": "005-adapter",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {

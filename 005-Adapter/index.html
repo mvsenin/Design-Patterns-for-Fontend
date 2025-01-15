@@ -15,19 +15,54 @@
             <div>
                 <label for="payMethod">Select payment method: </label>
                 <select id="payMethod" name="payMethod" value="">
-                    <option value="payBySPB">СПБ</option>
+                    <option value="payBySBP">СПБ</option>
                     <option value="payByCard">Картой банка</option>
                     <option value="payBySMS">SMS</option>
-                    <option value="payByOldSPB">Старый СПБ</option>
+                    <option value="payByOldSBP">Старый СПБ</option>
                 </select>
             </div>
             <div>
-                <button id="submit" disabled="true" type="submit">submit</button>
+                <button id="submit" disabled="true" type="submit" title="It always calls Payment Processor.pay() method for all payment types which are wrapped by the Payment Adapter class to unify its interface and hide implementation behind that">submit &#9432;</button>
             </div>
             <div>
                 <span id="payment-data"></span>
             </div>
         </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Adapter design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Adapter design pattern</strong>.</p>
+                <p dir="auto">This is one of the <strong>Structural design patterns</strong> that allows you to make one interface or object work with another that has a different interface. It acts as a bridge, enabling the compatibility of two systems that would not naturally work together.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Compatibility:</strong> The Adapter Method allows you to make two incompatible interfaces work together, promoting interoperability between different parts of your application or external libraries.</li>
+                <li><strong>Code Reusability:</strong> It enables the integration of existing components or systems into new contexts without modifying their core code, enhancing code reusability and reducing redundancy.</li>
+                <li><strong>Maintainability:</strong> By encapsulating the adaptation logic within an Adapter class, it simplifies maintenance. You can make changes to the Adapter without affecting the client code or the Adaptee, making the codebase more maintainable.</li>
+                <li><strong>Flexibility:</strong> The Adapter Method provides flexibility in software design by allowing you to extend or evolve systems without breaking existing functionality. New systems can be integrated with older ones, and vice versa, with ease.</li>
+                <li><strong>Testing Simplification:</strong> The client code interacts with a consistent and expected interface, making testing straightforward. You can test the client code without needing to deal with the complexities of the Adaptee's interface.</li>
+                <li><strong>Encapsulation:</strong> It promotes encapsulation by isolating the adaptation logic within the Adapter class. This separation of concerns leads to cleaner, more modular, and maintainable code.</li>
+                <li><strong>Enhanced Security:</strong> Adapters can provide security and access control by controlling how the Adaptee's methods are accessed and ensuring that only authorized actions are performed.</li>
+                <li><strong>Promotion of Good Design Principles:</strong> The Adapter Method aligns with good design principles, such as the Single Responsibility Principle (SRP) and the Open/Closed Principle (OCP), which encourage clean, extensible, and maintainable code.</li>
+                <li><strong>Smooth Integration:</strong> It allows you to integrate external or third-party libraries with your codebase, even if they have different interfaces, enabling you to leverage the functionality of these libraries without extensive modifications.</li>
+                <li><strong>Consistent Interfaces:</strong> Clients interacting with an Adapter only need to know the expected interface, which simplifies the design and usage of complex systems.</li>
+                <li><strong>Cost-Effective:</strong> The Adapter Method can save development time and cost by reducing the need for extensive refactoring or rewriting of existing code to make it compatible with new requirements.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Complexity:</strong> Using adapters can introduce additional complexity to your codebase, especially when dealing with multiple adapters and complex adaptions. This added complexity can make the code harder to understand and maintain.</li>
+                <li><strong>Performance Overhead:</strong> Adapters may introduce some performance overhead because they involve additional method calls and translation between interfaces. In performance-critical applications, this overhead could be a concern.</li>
+                <li><strong>Overhead for Simple Cases:</strong> In simple scenarios where the interfaces are almost identical, using an adapter might seem like an unnecessary abstraction and add unnecessary code.</li>
+                <li><strong>Potential for Bugs:</strong> The introduction of adapters can lead to potential bugs or errors if the adaptation logic is not correctly implemented or updated when changes occur in the Adaptee.</li>
+                <li><strong>Maintenance Challenges:</strong> Adapters need to be maintained as the Adaptee or the expected interface changes. If not properly maintained, they can become a source of issues.</li>
+                <li><strong>Abstraction Leaks:</strong> In some cases, the details of the Adaptee may leak through the adapter, making it less effective in isolating the client code from the complexities of the underlying system.</li>
+                <li><strong>Overhead in Memory Usage:</strong> Adapters can consume additional memory, particularly in scenarios with a large number of objects, which may not be efficient in memory-constrained environments.</li>
+                <li><strong>Potential for Unintended Consequences:</strong> Adapting the behavior of one system to match another may have unintended consequences, especially if the behavior of the two systems differs significantly.</li>
+                <li><strong>Design Overhead:</strong> Implementing and maintaining adapters requires additional design work, which can add overhead to the development process.</li>
+                <li><strong>Learning Curve:</strong> Developers new to the codebase may need to understand the purpose and implementation of adapters, adding to the learning curve.</li>
+                </ul>
+            </article>
+        </details>
         <script src="src/index.ts"></script>
     </body>
 </html>
