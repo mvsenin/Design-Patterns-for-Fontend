@@ -20,6 +20,8 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 |--------------|------------------|-----------|
 | 1.&nbsp;Facade    | Functionality in one or more subsystems | It is often present in systems that are built around a multi-layer architecture |
 | 2.&nbsp;Adapter    | Classes/objects having different/legacy interfaces | Integrating Legacy Code  <br />  Working with Third-Party APIs <br /> Database Connectivity <br /> File Format Conversion <br /> Data Transformation <br /> Version Upgrades |
+| 3.&nbsp;Composite    | Different objects which are put together to create a structure with parts and wholes handled in a similar way | Processing hierarchical structures and collections |
+
 
 # Behavioral patterns
 > Behavioral Patterns are concerned with algorithms and the assignment of responsibilities between objects.
