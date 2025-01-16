@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adapter design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="global-state">
+            <div class="global-state-col">
+                File system structure:
+                <span id="output-data">as<p>sa</p><p>sa</p><p>sa</p><p>sa</p></span>
+                <i>The output is generated using Component's print() and getSize()<br>
+                   methods despite the fact which objects' classes present<br>
+                   in the hierachy</i>
+            </div>
+            <div class="global-state-row">
+                <span class="global-state-col">
+                    <select id="destFolderName" name="destFolderName" value="">
+                    </select>
+                    <label for="newFolderName">destination folder</label>
+                </span>
+            </div>
+            <div class="global-state-row">
+                <span class="global-state-col">
+                    <input id="newFolderName" name="newFolderName" value="">
+                    <label for="newFolderName">folder name</label>
+                </span>
+                <button id="addFolderButton" disabled="true">Add folder</button>
+            </div>
+            <div class="global-state-row">
+                <span class="global-state-col">
+                    <input id="newFileName" name="newFileName" value="">
+                    <label for="newFileName">file name</label>
+                </span>
+                <span class="global-state-col">
+                    <input id="newFileSize" name="newFileSize" value="" size="4">
+                    <label for="newFileSize">file size</label>
+                </span>
+                <button id="addFileButton" disabled="true">Add file</button>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Composite design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Composite design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Structural design patterns</strong> that allows us to build structures so that clients can work with both individual elements and collections of elements seamlessly and consistently and makes it easy to add new types of components (individual or composite) without modifying the client code promoting flexibility and reusability.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Flexibility:</strong> The Composite design pattern allows us to treat the individual components and composite objects uniformly. so, that provides flexibility to work with both components and composites similarly.</li>
+                <li><strong>Simplified client code:</strong> As the composite design pattern provides a common interface i.e. component to interact with the methods, the client need not provide the different implementations to distinguish the individual components and composite objects.</li>
+                <li><strong>Recursive Behavior:</strong> The Composite design pattern supports the recursive traversal and processing of the composite structure. This is particularly useful for operations that must be applied recursively to all components in the structure.</li>
+                <li><strong>Simplified Addition of Components:</strong> The Composite design pattern makes it simple to add new components without modifying the client code.</li>
+                <li><strong>Single Responsibility Principle:</strong> In this pattern, Each class (leaf or composite) has a single responsibility: either representing an individual object or a composition of objects. This adheres to the Single Responsibility Principle (SRP).</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Complexity in implementation:</strong> The Composite design pattern is implemented in such a way that it should handle both individual components and composite objects which is quite complex to implement.</li>
+                <li><strong>Limited Abstraction:</strong> The designing of the common interface can limit the abstraction level for some operations, it needs to be fairly general to accommodate different types of components.</li>
+                <li><strong>Performance Considerations:</strong> Depending on the implementation, operations like traversing the composite structure can potentially have a performance impact, especially as the structure grows more extensive and more complex.</li>
+                </ul>
+            </article>
+        </details>
+        <script src="src/index.ts"></script>
+    </body>
+</html>
