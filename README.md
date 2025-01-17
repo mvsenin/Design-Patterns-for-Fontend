@@ -11,7 +11,7 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 |--------------|------------------|-----------|
 | 1.&nbsp;Singleton  <br /> <br /> <br /> <br /> <br />| The sole instance of a class  <br /> <br /> <br /> <br /> <br />| Global logger service <br /> Global state data <br /> Hardware interface access <br /> Managing Shared Resources (Cache) <br /> Service Classes <br /> Configuration File |
 | 2.&nbsp;Builder <br />| Object's steps or configurations to be created <br />| Complex Object Creation <br /> Object Initialization Flexibility |
-| 3.&nbsp;Object pool <br />| Set of objects in pool <br />| Web testing (e.g. instances of Selenium WebDriver) <br /> Database connection management |
+| 3.&nbsp;Object pool <br />| Set of reusable objects in a pool <br />| Web testing (e.g. instances of Selenium WebDriver) <br /> Database connection management |
 
 # Structural patterns
 
