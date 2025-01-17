@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Builder design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+
+    <body>
+        <div class="global-state">
+            <div class="global-state-col">
+                <label for="emplName">Name: *</label>
+                <input id="emplName" name="emplName" value="" required/>
+            </div>
+            <div class="global-state-col">
+                <label for="emplBirthdate">Birthdate: </label>
+                <input id="emplBirthdate" name="emplBirthdate" type="date"/>
+            </div>
+            <div class="global-state-col">
+                <label for="emplCity">City: </label>
+                <input id="emplCity" name="emplCity" value=""/>
+            </div>
+            <div class="global-state-col">
+                <label for="emplCompany">Company: </label>
+                <input id="emplCompany" name="emplCompany" value=""/>
+            </div>
+            <div class="global-state-col">
+                <label for="emplPosition">Position: </label>
+                <input id="emplPosition" name="emplPosition" value=""/>
+            </div>
+            <div class="global-state-col">
+                <button id="submit" disabled="true">submit</button>
+            </div>
+        </div>
+        <div class="outputContainer" id="outputContainer">No data yet</div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Builder design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Builder design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Creational design patterns</strong> used to construct complex objects by separating the construction process from the actual representation. It's especially useful when an object requires multiple steps or configurations to be created.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Improved Object Creation:</strong> The Builder pattern allows for the step-by-step construction of an object, making the creation process more understandable and manageable.</li>
+                <li><strong>Flexible Object Construction:</strong> It provides flexibility by allowing different configurations for constructing objects.</li>
+                <li><strong>Code Readability:</strong> The code using the Builder pattern is often more readable and self-explanatory, as method names in the builder convey the intention of the construction steps.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Code Overhead:</strong> Implementing the Builder pattern requires creating a separate builder class or methods, which can introduce additional code and complexity.</li>
+                <li><strong>Not Suitable for Simple Objects:</strong> For simple objects that do not have a significant number of properties or configurations, the Builder pattern may be overly complex.</li>
+                </ul>
+            </article>
+        </details>
+        <script src="src/index.ts"></script>
+    </body>
+</html>
