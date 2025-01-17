@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Object Pool design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+    <body>
+        <div class="global-state">
+            <span id="availablePool" class="outputContainer">123</span>
+            <div id="controls" class="global-state-col">
+                <span>
+                    <label for="useExtra" title="Extra object can be created once pool of available objects is empty">Use extra:</label>
+                    <input id="useExtra" name="useExtra" type="checkbox" checked="true" title="Extra object can be created once pool of available objects is empty">
+                </span>
+                <button id="btnUse">Use object &gt;&gt;</button>
+                <button id="btnRelease" disabled="true">&lt;&lt; Release object</button>
+                <button id="btnTest" disabled="true">Test objects</button>
+            </div>
+            <span id="inUsePool" class="outputContainer">123</span>
+        </div>
+        <script src="./src/index.ts"></script>
+    </body>
+</html>
