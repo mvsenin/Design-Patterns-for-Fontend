@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Chain of Responsibility design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+    <body>
+        <div class="global-state">
+            <div class="global-state-col"><b>Events:</b>
+                <span id="Events" class="outputContainer"></span>
+            </div>
+            <div id="controls" class="global-state-col">
+                <button id="btnTest">Send event</button>
+                <div><input id="showAlerts" type="checkbox" checked>Show alerts</input></div>
+            </div>
+            <div class="global-state-col"><b>Logs:</b>
+                <span id="Logs" class="outputContainer"></span>
+            </div>
+        </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Object Pool design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Object Pool design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Behavioral design patterns</strong> that allows an object to pass a request along a chain of handlers. Each handler in the chain decides either to process the request or to pass it along the chain to the next handler.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Decoupling of Objects:</strong> The pattern makes enables sending a request to a series of possible recipients without having to worry about which object will handle it in the end. This lessens the reliance between items.</li>
+                <li><strong>Flexibility and Extensibility:</strong> New handlers can be easily added or existing ones can be modified without affecting the client code. This promotes flexibility and extensibility within the system.</li>
+                <li><strong>Dynamic Order of Handling:</strong> The sequence and order of handling requests can be changed dynamically during runtime, which allows adjustment of the processing logic as per the requirements.</li>
+                <li><strong>Simplified Object Interactions:</strong> It simplifies the interaction between the sender and receiver objects, as the sender does not need to know about the processing logic.</li>
+                <li><strong>Enhanced Maintainability:</strong> Each handler performs a specific type of processing, which making maintaining and modifying the individual components easier without impacting the overall system.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Possible Unhandled Requests:</strong> The chain should be implemented correctly otherwise there is a chance that some requests might not get handled at all, which leads to unexpected behavior in the application.</li>
+                <li><strong>Performance Overhead:</strong> The request will go through several handlers in the chain if it is lengthy and complicated, which could cause performance overhead. The processing logic of each handler has an effect on the system’s overall performance.</li>
+                <li><strong>Complexity in Debugging:</strong> The fact that the chain has several handlers can make debugging more difficult. Tracking the progression of a request and determining which handler is in charge of handling it can be difficult.</li>
+                <li><strong>Runtime Configuration Overhead:</strong> It may become more difficult to manage and maintain the chain of responsibility if the chain is dynamically modified at runtime.</li>
+                </ul>
+            </article>
+        </details>
+        <script src="./src/index.ts"></script>
+    </body>
+</html>
