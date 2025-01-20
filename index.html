@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Object Pool design pattern demo</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/styles.css" />
+    </head>
+    <body>
+        <div class="global-state">
+            <span id="availablePool" class="outputContainer">123</span>
+            <div id="controls" class="global-state-col">
+                <span>
+                    <label for="useExtra" title="Extra object can be created once pool of available objects is empty">Use extra:</label>
+                    <input id="useExtra" name="useExtra" type="checkbox" checked="true" title="Extra object can be created once pool of available objects is empty">
+                </span>
+                <button id="btnUse">Use object &gt;&gt;</button>
+                <button id="btnRelease" disabled="true">&lt;&lt; Release object</button>
+                <button id="btnTest" disabled="true">Test objects</button>
+            </div>
+            <span id="inUsePool" class="outputContainer">123</span>
+        </div>
+        <details class="container-lg">
+            <summary>
+              <b><img src="/src/hand-index-thumb.svg" height="30vh"/>Object Pool design pattern summary</b>
+            </summary>
+            <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Object Pool design pattern</strong></p>
+                <p dir="auto">This is one of the <strong>Creational design patterns</strong> used to reduces memory consumption by reusing objects, maintains a pool of reusable objects and allows us to create new objects without incurring the cost of creating them from scratch each time.</p>
+                <p dir="auto">Pros:</p>
+                <ul dir="auto">
+                <li><strong>Performance Improvement:</strong> The primary advantage of the Object Pool pattern is its ability to significantly enhance performance by reducing the overhead associated with object creation and destruction. By reusing existing objects, applications can avoid the computational cost of instantiation, especially for objects that are expensive to create, such as database connections or large graphics objects12.</li>
+                <li><strong>Resource Management:</strong> Object pools help manage resources efficiently by limiting the number of active instances at any given time. This is particularly useful for managing limited resources like network sockets or threads, ensuring that the application does not exceed resource limits24.</li>
+                <li><strong>Predictable Object Availability:</strong> When using an object pool, clients can obtain objects in a predictable amount of time. This is crucial in applications where the time taken to create new instances can vary significantly, such as when establishing network connections24.</li>
+                <li><strong>Reduced Garbage Collection Pressure:</strong> By reusing objects instead of frequently creating and destroying them, the Object Pool pattern can reduce pressure on the garbage collector. This can lead to improved application performance and reduced latency, as there are fewer allocations and deallocations happening during runtime34.</li>
+                <li><strong>Simplified Object Lifecycle Management:</strong> The pattern simplifies the management of object lifecycles by providing a clear mechanism for borrowing and returning objects. Clients do not need to worry about the complexities of object creation and destruction; they simply request an object from the pool when needed and return it afterward34.</li>
+                <li><strong>Flexibility in Configuration:</strong> Object pools can be configured with minimum and maximum sizes, allowing developers to fine-tune resource allocation based on application needs. This flexibility helps ensure that resources are utilized effectively without overwhelming the system45.</li>
+                <li><strong>Easier Maintenance:</strong> Since pooled objects are reused, maintaining their state can be easier as they can be reset before being returned to the pool. This can help prevent issues related to stale data or unintended side effects from previous uses of an object12.</li>
+                </ul>
+                <p dir="auto">Cons:</p>
+                <ul dir="auto">
+                <li><strong>Increased Complexity:</strong> Implementing an object pool adds complexity to the codebase. Developers must manage the lifecycle of pooled objects, including their creation, resetting, and destruction. This can lead to more intricate code that may be harder to maintain and understand 23.</li>
+                <li><strong>Memory Waste:</strong> If the pool size is set too high relative to the actual usage, it can lead to wasted memory. For instance, if many objects are preallocated but not used, the allocated memory remains occupied without being utilized effectively 12.</li>
+                <li><strong>Overhead of Resetting Objects:</strong> When an object is returned to the pool, it often needs to be reset to a clean state before being reused. If the reset operation is costly or complex, it could negate the performance benefits of pooling, especially if object creation is cheaper than resetting 12.</li>
+                <li><strong>Limited Use Cases:</strong> Object pooling is most beneficial for expensive-to-create objects or those that require limited availability. For lightweight or frequently created objects, pooling may introduce unnecessary overhead without significant performance gains 23.</li>
+                <li><strong>Unpredictable Usage Patterns:</strong> If the usage patterns of objects are unpredictable or sporadic, maintaining a pool may not be advantageous. In such cases, the overhead of managing the pool can outweigh its benefits 23.</li>
+                <li><strong>Potential for Resource Exhaustion:</strong> If not managed correctly, an object pool can lead to resource exhaustion. For example, if all pooled objects are in use and new requests come in, the application might need to create additional instances dynamically, which can undermine the purpose of pooling 23.</li>
+                <li><strong>Thread Safety Issues:</strong> In a multi-threaded environment, ensuring that access to the pool is thread-safe can complicate implementation. Without proper synchronization mechanisms, concurrent access could lead to race conditions or inconsistent states 23.</li>
+                <li><strong>Difficulty in Testing and Debugging:</strong> The added complexity of an object pool can make testing and debugging more challenging. It may require additional setup and teardown code in tests to handle pooled objects correctly 13.</li>
+                </ul>
+                </article>
+        </details>
+        <script src="./src/index.ts"></script>
+    </body>
+</html>
