@@ -3,10 +3,10 @@
  */
 
 // Import composed system
-import { SubsystemA, SubsystemB, SubsystemC } from "./system.js";
+import { SubsystemA, SubsystemB, SubsystemC } from "./defaultSystem.js";
 
 // Facade class uses system components via its interface common to all the system versions
-export class Facade {
+export default class Facade {
   constructor(a = SubsystemA, b = SubsystemB, c = SubsystemC) {
     this.subsystemA = new a();
     this.subsystemB = new b();
@@ -29,10 +29,3 @@ export class Facade {
     );
   }
 }
-
-const facade = new Facade();
-
-// DBG: you can combine subsystems as you need
-// const facade = new Facade(SubsystemB, SubsystemC, SubsystemA);
-
-export default facade;

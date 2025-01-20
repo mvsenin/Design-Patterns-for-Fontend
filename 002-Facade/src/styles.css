@@ -16,7 +16,19 @@
   }
   .global-state {
     width: calc(100%-40px);
+    gap: 20px;
+  }
+  .global-state-row {
+    flex-direction: row;
     gap: 10px;
+  }
+  .global-state-col {
+    gap: 10px;
+    font-size: 16px;
+  }
+  #subsystem-info {
+    line-height: 24px;
+    padding: 10px;
   }
 }
 
@@ -38,7 +50,19 @@
   }
   .global-state {
     width: calc(100%);
+    gap: 4vh;
+  }
+  .global-state-row {
+    flex-direction: column;
+    gap: 1vh;
+  }
+  .global-state-col {
     gap: 2vh;
+    font-size: 2vh;
+  }
+  #subsystem-info {
+    line-height: 4vh;
+    padding: 1vh;
   }
 }
 
@@ -54,6 +78,15 @@ body {
   height: 20%;
   text-align: center;
   padding: 20px;
+}
+.global-state-row {
+  display: flex;
+  justify-content: center;
+}
+.global-state-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 .markdown-body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",

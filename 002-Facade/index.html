@@ -9,8 +9,13 @@
     <body>
         <div class="global-state">
             <span>Please press the buttons to get the system components info via common interface(s)</span>
-            <span><button id="get-subsystem-info">Get Subsystem Info</button> - facade.commonInfoInterface()</span>
-            <span><button id="log-subsystem-info">Log Subsystem Info</button> - facade.commonLogInterface()</span>
+            <span class="global-state-row">
+                <button id="generate-new-system">Generate<br>new system</button>
+                <span class="global-state-col">
+                    <div class="global-state-row"><button id="get-subsystem-info">Get Subsystem Info</button> - calls facade.commonInfoInterface()</div>
+                    <div class="global-state-row"><button id="log-subsystem-info">Log Subsystem Info</button> - calls facade.commonLogInterface()</div>
+                </span>
+            </span>
             <span id="subsystem-info" class="italic">No Subsystem Info</span>
         </div>
         <details class="container-lg">
@@ -35,7 +40,7 @@
                 <li><strong>Potential Design Misuse:</strong> In some cases, taking the advantage of hiding the implementation details developers may hide up the poor implementation or design issues.</li>
                 </ul>
                 </article>
-          </details>
+        </details>
         <script src="src/index.js"></script>
     </body>
 </html>
