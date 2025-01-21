@@ -1,4 +1,4 @@
-This is demo project for **Object Pool design pattern**
+This is demo project for **Chain of Responsibility design pattern**
 
 This is one of the **Behavioral design patterns** that allows an object to pass a request along a chain of handlers. Each handler in the chain decides either to process the request or to pass it along the chain to the next handler.
 
