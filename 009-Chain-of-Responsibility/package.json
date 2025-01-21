@@ -1,5 +1,5 @@
 {
-  "name": "008-object-pool",
+  "name": "009-chain-or-responsibility",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
