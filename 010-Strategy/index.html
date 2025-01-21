@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facade design pattern demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <div class="global-state">
+      <span>Please press the buttons to add a route to a path:</span>
+      <span class="global-state-row">
+        <span class="global-state-col">
+          <div class="global-state-row">
+            <button id="add-walking-route">Add walking route</button>
+          </div>
+          <div class="global-state-row">
+            <button id="add-car-route">Add car route</button>
+          </div>
+          <div class="global-state-row">
+            <button id="add-public-route">Add public transport route</button>
+          </div>
+          <div class="global-state-row">
+            <button id="add-air-route">Add airplane route</button>
+          </div>
+          <div class="global-state-row">
+            <button id="add-water-route">Add water route</button>
+          </div>
+        </span>
+      </span>
+      <span id="output" class="italic">No Path Yet</span>
+    </div>
+    <details class="container-lg">
+      <summary>
+        <b><img src="/src/hand-index-thumb.svg" height="30vh" />Strategy design pattern summary</b>
+      </summary>
+      <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Strategy design pattern</strong></p>
+        <p dir="auto">This is one of the <strong>Behavioral design patterns</strong> that helps solve the problem of needing to use different methods or behaviors in your code and easily switch between them. It defines a family of algorithms, encapsulates each one, and makes them interchangeable.</p>
+        <p dir="auto">It allows the client to choose an algorithm from a family of algorithms at runtime, without altering the code that uses these algorithms.</p>
+        <p dir="auto">Pros:</p>
+        <ul dir="auto">
+        <li><strong>Flexibility:</strong> It allows for easy addition or modification of strategies without altering the client code.</li>
+        <li><strong>Isolation:</strong> We can isolate the specific implementation details of the algorithms from the client’s code.</li>
+        <li><strong>Reusability:</strong> Strategies can be reused across different contexts.</li>
+        <li><strong>Clean Code:</strong> Promotes a clean and modular design by separating the algorithm from the context.</li>
+        <li><strong>Maintainability:</strong> Encapsulating each algorithm or behavior within its own class, makes it easier to modify, test, and extend the codebase without affecting other parts of the code.</li>
+        <li><strong>Easy Testing:</strong> With the Strategy pattern, it becomes easier to test individual algorithms independently of the context.</li>
+        <li><strong>Run-time Switching:</strong> It is possible that application can switch the strategies at the run-time.</li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+        <li><strong>Increased Number of Classes:</strong> If there are many strategies, it can lead to a larger number of classes, which can be hard to manage.</li>
+        <li><strong>Creating Extra Objects:</strong> In most cases, the application configures the Context with the required Strategy object. Therefore, the application needs to create and maintain two objects in place of one.</li>
+        <li><strong>Awareness among clients:</strong> Difference between the strategies should be clear among the clients to able to select a best one for them.</li>
+        <li><strong>Complexity:</strong> Implementing the Strategy pattern can introduce additional classes and complexity into your code. Each strategy has its own class, and managing these classes can become complex for large systems.</li>
+        <li><strong>Increased Code Size:</strong> The additional classes and interfaces introduced by the Strategy pattern can lead to an increase in code size.</li>
+        </ul>
+      </article>
+    </details>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
