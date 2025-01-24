@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bridge design pattern demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="global-state">
+        <div class="global-state-row">
+          <button id="image-view">Generate Image View List</button>
+          <button id="text-view">Generate Text View List</button>
+          <button id="table-view">Generate Table View List</button>
+        </div>
+      <span id="output" class="outputStyle">Please generate list</span>
+    </div>
+    <details class="container-lg">
+      <summary>
+        <b><img src="/src/hand-index-thumb.svg" height="30vh" />Bridge design pattern summary</b>
+      </summary>
+      <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Bridge design pattern</strong></p>
+        <p dir="auto">This is one of the <strong>Structural design patterns</strong> offering a way to separate a system's abstractions from its implementations.</p>
+        <p dir="auto">At its core, the Bridge pattern is about creating a bridge between two potentially complex systems, ensuring that changes in one will not affect the other. Imagine a bustling city with two sides separated by a river. Without a bridge, crossing from one side to the other would be a challenge, especially as the city grows and traffic increases. But with a bridge, the two sides can operate independently, yet remain connected in a controlled manner.</p>
+        <p dir="auto">In software terms, the "city" represents our system's functionalities, the "river" represents the system's complexities, and the "bridge" represents the design pattern that connects and manages these complexities.</p>
+        <p dir="auto">Pros:</p>
+        <ul dir="auto">
+        <li><strong>Decoupling of Abstraction and Implementation:</strong> The primary benefit of the Bridge pattern is the separation of the abstraction from its implementation. This decoupling ensures that changes in the abstraction hierarchy don't affect the implementation hierarchy and vice versa.</li>
+        <li><strong>Improved Extensibility:</strong> Both the abstraction and its implementation can be extended independently. This means you can add new operations to the abstraction or introduce new implementations without altering existing code.</li>
+        <li><strong>Single Responsibility Principle:</strong> The pattern adheres to the Single Responsibility Principle, ensuring that a class has only one reason to change. This makes the system more maintainable.</li>
+        <li><strong>Composition Over Inheritance:</strong> The Bridge pattern prefers composition over inheritance, which provides more flexibility in the structuring of code. This means you can change the behavior of an object at runtime by changing its composition rather than its class.</li>
+        <li><strong>Reduces Class Explosion:</strong> In systems where classes can be combined in multiple ways, the Bridge pattern can drastically reduce the number of resulting classes.</li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+        <li><strong>Increased Complexity:</strong> While the pattern promotes flexibility, it can introduce complexity in the codebase, especially when there are multiple levels of abstraction and implementation. This can make the system harder to understand for newcomers.</li>
+        <li><strong>Initial Setup Overhead:</strong> Setting up the Bridge pattern can seem like an overhead, especially for simpler scenarios where such a level of decoupling might not be necessary.</li>
+        <li><strong>Requires Deep Understanding:</strong> For the pattern to be effective, developers need to understand its intent thoroughly. Misuse or overuse can lead to an overly complicated design.</li>
+        <li><strong>Potential Performance Overhead:</strong> The indirection introduced by the bridge can, in some scenarios, introduce a slight performance overhead. However, in most cases, this overhead is negligible.</li>
+        </ul>
+      </article>
+    </details>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
