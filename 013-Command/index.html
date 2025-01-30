@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Command design pattern demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="global-state">
+        <div class="global-state-row">
+          <div class="global-state-col">
+            <span class="title">Indicator</span>
+            <span id="indicator" class="hidden"></span>
+          </div>
+          <div class="global-state-col">
+            <span class="title">Please select command:</span>
+            <span>
+              <select id="command" name="command" value="">
+                <option></option>
+                <option value="commandOn">On</option>
+                <option value="commandOff">Off</option>
+                <option value="commandChangeForm">Change form</option>
+                <option value="commandChangeColor">Change color</option>
+              </select>
+              <select id="commandChangeForm" name="commandChangeForm" hidden="true">
+                <option value="square" selected>square</option>
+                <option value="circle">circle</option>
+                <option value="triangle">triangle</option>
+              </select>
+              <select id="commandChangeColor" name="commandChangeColor" hidden="true">
+                <option value="#000000">#000000</option>
+                <option value="#FF0000">#FF0000</option>
+                <option value="#00FF00">#00FF00</option>
+                <option value="#0000FF">#0000FF</option>
+                <option value="#FFFFFF">#FFFFFF</option>
+              </select>
+              <button id="sendCommand">Send command</button>
+          </span>
+          </div>  
+        </div>
+    </div>
+    <details class="container-lg">
+      <summary>
+        <b><img src="/src/hand-index-thumb.svg" class="hand"/>Command design pattern summary</b>
+      </summary>
+      <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Command design pattern</strong></p>
+        <p dir="auto">This is one of the <strong>Behavioral design patterns</strong> that encapsulates an incoming request into a standalone object. This object contains all the necessary information to perform a request including the method to call and parameters.</p>
+        <p dir="auto">The pattern helps to separate the sender information of the request and the object that processes the request. It promotes loose coupling, reusability, and flexibility in handling commands by turning requests into standalone objects. So, the objects can be processed or executed by the different parts of the application.</p>
+        <p dir="auto">Pros:</p>
+        <ul dir="auto">
+        <li><strong>Decoupling:</strong> The Command method helps to decouple the sender of the request (client) and receiver of the request (Recievers) through Invoker. The client only knows how to send a request and the rest is abstracted. This gives a more generalized way to separate the tasks.</li>
+        <li><strong>Flexibility and Extensibility:</strong> The Command method makes it easier to add new changes without modifying the underlying code promoting a flexible and extensible design.</li>
+        <li><strong>Undo/Redo Functionality:</strong> The Command method stores the state of the command in the Concrete Command class which helps to restore the previous states easily.</li>
+        <li><strong>Simplified Client Code:</strong> The client or the sender needs to know how to send a request without bothering about the underlying code. This makes the client code simplified.</li>
+        <li><strong>Parameterization and Queuing:</strong> The Commands in the Command method can store specific parameters, allowing for parameterized actions. Commands can also be queued and executed in a specific order, providing control over the sequence of operations.</li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+        <li><strong>Increased Complexity:</strong> For smaller and simple use cases, implementing the command method potentially makes the codebase look more complex and harder to manage.</li>
+        <li><strong>Memory Overhead:</strong> For implementing Undo/Redo functionality, storing the previous state can lead to memory overhead, especially for use cases having more commands to execute.</li>
+        <li><strong>Overhead of Creating Objects:</strong> Each command demands the creation of a new object which leads to Overhead of Objects in case of use cases having more number of commands.</li>
+        <li><strong>Learning Curve:</strong> Understanding and implementing the Command Pattern might require developers to familiarize themselves with the concept, potentially resulting in a learning curve, especially for those new to design patterns.</li>
+        </ul>
+      </article>
+    </details>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
