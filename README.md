@@ -39,5 +39,6 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 | 2.&nbsp;[Publisher/Subscriber](004-Publisher-Subscriber)  | Number of objects that subscribes/listen to other object(s); how the listening objects stay up to date | System handling the sending and receiving of messages, e.g. chat apps |
 | 3.&nbsp;[Chain of Responsibility](009-Chain-of-Responsibility)  | Chain of multiple objects with single successor, or a tree-like structure | Loose coupling between the sender and receiver <br /> Dynamic Chaining <br /> Single Responsibility Principle <br /> Sequential Order <br /> Fallback Mechanism |
 | 4.&nbsp;[Strategy](010-Strategy)  | Set of methods, behaviors, algorithms | Algorithm Selection <br /> Behavioral Variations <br /> Complex Decision-making Logic <br /> Dynamic Runtime Behavior |
+| 5.&nbsp;[Command](013-Command)  | Set of commands | Control of state(s) <br />  |
 
 Good luck.
