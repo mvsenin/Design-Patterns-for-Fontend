@@ -11,13 +11,15 @@ export default class Invoker {
         this.command = undefined;
       }
     
-    setCommand(command: Command) {
+    setCommand(command: Command): Invoker {
         this.command = command;
+        return this;
     }
 
-    executeCommand(attributes?: string|undefined) {
+    executeCommand(attributes?: string|undefined): Invoker {
         if (this.command !== undefined) {
             this.command?.execute(attributes);
         }
+        return this;
     }
 }

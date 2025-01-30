@@ -19,17 +19,18 @@
             <span>
               <select id="command" name="command" value="">
                 <option></option>
-                <option value="commandOn">On</option>
-                <option value="commandOff">Off</option>
-                <option value="commandChangeForm">Change form</option>
-                <option value="commandChangeColor">Change color</option>
+                <option value="apply">Apply selected from & color</option>
+                <option value="CommandOn">On</option>
+                <option value="CommandOff">Off</option>
+                <option value="CommandChangeForm">Change form</option>
+                <option value="CommandChangeColor">Change color</option>
               </select>
-              <select id="commandChangeForm" name="commandChangeForm" hidden="true">
+              <select id="CommandChangeForm" name="CommandChangeForm" hidden="true">
                 <option value="square" selected>square</option>
                 <option value="circle">circle</option>
                 <option value="triangle">triangle</option>
               </select>
-              <select id="commandChangeColor" name="commandChangeColor" hidden="true">
+              <select id="CommandChangeColor" name="CommandChangeColor" hidden="true">
                 <option value="#000000">#000000</option>
                 <option value="#FF0000">#FF0000</option>
                 <option value="#00FF00">#00FF00</option>
@@ -37,7 +38,8 @@
                 <option value="#FFFFFF">#FFFFFF</option>
               </select>
               <button id="sendCommand">Send command</button>
-          </span>
+            </span>
+            <span id="info"></span>
           </div>  
         </div>
     </div>

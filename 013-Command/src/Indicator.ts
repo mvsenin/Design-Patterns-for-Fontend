@@ -47,7 +47,7 @@ export default class Indicator {
             } else {
                 this.panel.classList.add('hidden');
             }
-            console.log('UI_Draw()', this.form);
+
             switch (this.form) {
                 case 'square': {
                     this.panel.innerHTML = `
