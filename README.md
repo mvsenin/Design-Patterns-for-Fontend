@@ -40,5 +40,6 @@ Below you can see the list (to be updated per demo prepatation and readiness) of
 | 3.&nbsp;[Chain of Responsibility](009-Chain-of-Responsibility)  | Chain of multiple objects with single successor, or a tree-like structure | Loose coupling between the sender and receiver <br /> Dynamic Chaining <br /> Single Responsibility Principle <br /> Sequential Order <br /> Fallback Mechanism |
 | 4.&nbsp;[Strategy](010-Strategy)  | Set of methods, behaviors, algorithms | Algorithm Selection <br /> Behavioral Variations <br /> Complex Decision-making Logic <br /> Dynamic Runtime Behavior |
 | 5.&nbsp;[Command](013-Command)  | Set of commands | Control of state(s) <br />  |
+| 6.&nbsp;[Memento](014-Memento)  | Set of objects in stack <br /> Logic of stack management | Undo/redo functionality <br /> History tracking <br /> Reverting an item to a former state |
 
 Good luck.
