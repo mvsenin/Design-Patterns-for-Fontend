@@ -4,6 +4,8 @@ These are **Creational design patterns**:
 
 # Factory Method
 
+Factory Method pattern allows for the creation of objects without exposing the creation logic to the client. It involves creating a separate factory function that is responsible for creating instances of various related objects based on a specified input, creating objects while abstracting away the specifics of their creation.
+
 Pros:
 * **Abstraction and Encapsulation:** The factory function encapsulates the logic for creating objects based on role, abstracting away the creation details. Users of the factory don't need to worry about the intricate creation process.
 * **Simplified Object Creation:** The factory pattern simplifies object creation. Users only need to call a function, passing the necessary parameters, to get a fully initialized object.
@@ -20,6 +22,9 @@ Cons:
 * **Potential Overuse:** Overuse of the factory pattern can lead to an overly complex codebase, making it harder to understand and maintain. It's important to use the pattern judiciously and where it provides clear benefits.
 
 # Abstract Factory
+
+Abstract Factory abstracts the process of object creation by defining a family of related factory methods, each responsible for creating a different type of object. These factory methods are organized within an abstract factory interface or class, and the client code uses this interface to create objects.
+
 Pros:
 * **Consistency:** Abstract factories patterns ensure that the objects created within a family are compatible with each other. This helps us to maintain the consistency in our application, as we can ensure that all the objects created by the factory work together.
 * **Flexibility:** Abstract Factory pattern allows us to switch between different families of objects by using different concrete factories. This is especially useful when we need to support multiple variations of a product or when we want to change the behavior of our application by swapping out factories at runtime.
