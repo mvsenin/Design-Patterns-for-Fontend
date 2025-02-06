@@ -1,0 +1,20 @@
+{
+  "name": "015-mediator-and-state",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maksim Senin",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^5.7.3"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  }
+}

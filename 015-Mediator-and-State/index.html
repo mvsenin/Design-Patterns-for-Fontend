@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Command design pattern demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="global-state">
+        <div class="global-state-row">
+          <div class="global-state-col">
+            <span class="title">Air traffic control (Mediator):</span>
+            <span id="airTrafficControlPanel"></span>
+            <button id="closeAir" disabled="true">Airport temporrary closed</button>
+          </div>
+          <div class="global-state-col">
+            <span class="title">Flights (Colleague & State):</span>
+            <button id="startFlight">Start new flight</button>
+            <span id="infoPanel"></span>
+          </div>  
+        </div>
+    </div>
+    <details class="container-lg">
+      <summary>
+        <b><img src="/src/hand-index-thumb.svg" class="hand"/>Mediator design pattern summary</b>
+      </summary>
+      <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Mediator</strong> and <strong>State</strong> design pattern</p>
+        <p dir="auto">The <strong>Mediator</strong> pattern is one of the <strong>Behavioral design patterns</strong> that promotes loose coupling between objects by centralizing communication between them. It's particularly useful when you have a complex system with multiple objects that need to interact and you want to avoid the tight coupling that can arise from direct object-to-object communication</p>
+        <p dir="auto">Pros:</p>
+        <ul dir="auto">
+        <li><strong>Decoupling:</strong> The Mediator pattern reduces direct dependencies between objects, promoting a more loosely coupled system. Colleagues only need to know about the Mediator, not each other, which makes the system more maintainable and extensible.</li>
+        <li><strong>Centralized Control:</strong> Centralizing communication in a Mediator can simplify complex interactions in a system. This central hub can enforce rules, coordinate actions, and ensure that communication remains organized.</li>
+        <li><strong>Reusability:</strong> Mediators can be reused across different scenarios or projects. Once you have a well-defined Mediator interface or class, you can apply it to various situations where you need to manage interactions between objects.</li>
+        <li><strong>Promotes Single Responsibility Principle:</strong> The Mediator pattern encourages the Single Responsibility Principle by isolating communication-related logic in one place, making the codebase cleaner and more modular.</li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+        <li><strong>Complexity:</strong> In some cases, introducing a Mediator can add complexity to the system, especially if you have a small number of objects or if the interactions between objects are straightforward.</li>
+        <li><strong>Performance Overhead:</strong> Managing communication through a Mediator can introduce some performance overhead, as all messages pass through this central point. However, this overhead is usually negligible in most applications.</li>
+        <li><strong>Maintaining the Mediator:</strong> If the system becomes overly complex or if there are frequent changes in communication requirements, maintaining the Mediator can become challenging.</li>
+        <li><strong>Potential for God Object:</strong> Care should be taken not to turn the Mediator into a "God Object" that knows too much about the system. It should focus on facilitating communication, not on handling all logic.</li>
+        </ul>
+      </article>
+    </details>
+    <details class="container-lg">
+      <summary>
+        <b><img src="/src/hand-index-thumb.svg" class="hand"/>State design pattern summary</b>
+      </summary>
+      <article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto">This is demo project for <strong>Mediator</strong> and <strong>State</strong> design pattern</p>
+        <p dir="auto">The <strong>State</strong> pattern is one of the <strong>Behavioral design patterns</strong> that allows an object to alter its behavior when internal state changes occur. This pattern is used when an object wants to change its state dynamically. When we want to change behavior of object it internally uses if-else block to perform actions
+        Pros:</p>
+        <ul dir="auto">
+        <li><strong>Clean Code:</strong> The state pattern facilitates code pattern and organization. This fosters code cleanliness and enhances maintainability to provide best Output.</li>
+        <li><strong>Flexibility:</strong> The State Method makes it easier to add states without affecting the behavior of other states. When there are changes in requirements it is flexible.</li>
+        <li><strong>Readability:</strong> Code is more readable as the logic associated with each state is isolated in its own class. This makes it easier for developers to understand.</li>
+        <li><strong>Scalability:</strong> Adding new states is easier because each state is encapsulated in its own class. This makes the code more scalable.</li>
+        <li><strong>Encapsulation:</strong> Each state is encapsulated in its own class. This reduces complexity of the system.</li>
+        <li><strong>Reusability:</strong> States can be reused by different objects. This helps in code reusability.</li>
+        </ul>
+        <p dir="auto">Cons:</p>
+        <ul dir="auto">
+        <li><strong>More Number Of States:</strong> In case of many states code becomes complex.</li>
+        <li><strong>Learning Curve and Understandability:</strong> People who are not familiar with the State pattern and methods might find it difficult to understand the concept of state transitions and machines.</li>
+        <li><strong>Overheads:</strong> There might be a slight performance overhead associated with state transitions and the deputation of behavior to different state methods and classes.</li>
+        <li><strong>Applicability:</strong> Some situations where the state changes are minimal/less, using the State pattern might be an overkill.</li>
+        </ul>
+      </article>
+    </details>
+    <script src="src/index.ts"></script>
+  </body>
+</html>
