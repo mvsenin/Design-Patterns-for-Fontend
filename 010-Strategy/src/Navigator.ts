@@ -1,5 +1,8 @@
 import RouteStrategy, {Path} from "./Strategy";
 
+/**
+ * `Navigator` describes the context class with the reference to strategy one
+ */
 export default class Navigator {
     private routeStrategy: RouteStrategy;
     private route: Path[];

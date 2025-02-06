@@ -1,3 +1,6 @@
+/**
+ * `RouteStrategy` class describes the perantal strategy class - the route
+ */
 export default interface RouteStrategy {
     type: PathType;
 
@@ -24,6 +27,10 @@ export class Path {
     }
 }
 
+/**
+ * Futher, the concrete strategy classes inherits the strategy one - one class
+ * for each route type
+ */
 export class WalkStrategy implements RouteStrategy {
     public type: PathType;
 
